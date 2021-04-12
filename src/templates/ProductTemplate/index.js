@@ -1,5 +1,7 @@
 import React from 'react'
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
+import { Layout } from 'components'
+import { Grid } from './styles'
 
 export const query = graphql`
   query ProductQuery($shopifyId: String) {
@@ -11,5 +13,15 @@ export const query = graphql`
 
 export default function ProductTemplate(props){
     console.log(props);
-    return <h1>{props.data.shopifyProduct.title}</h1>;
+    return <Layout>
+        <Grid>
+            <div>
+                <h1>{props.data.shopifyProduct.title}</h1>
+            </div>
+
+            <div>
+                image
+            </div>
+            </Grid>
+        </Layout>
 }
