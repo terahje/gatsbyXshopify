@@ -9,6 +9,7 @@ export const query = graphql`
       title
       description
       images {
+        id
         localFile {
             childImageSharp {
             fluid(maxWidth: 300) {
