@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, ImageGallery } from 'components'
+import { Layout, ImageGallery, ProductQuantityAdder } from 'components'
 import { Grid, SelectWrapper, Price } from './styles'
 import CartContext from 'context/CartContext'
 import { navigate, useLocation } from '@reach/router'
@@ -62,10 +62,10 @@ export default function ProductTemplate(props) {
     return( 
     <Layout>
         <Grid>
-            <div>
-                <h1>{props.data.shopifyProduct.title}</h1>
-                <p>{props.data.shopifyProduct.description}</p>
-                {product?.availableForSale && !!selectedVariant && (
+        <div>
+          <h1>{props.data.shopifyProduct.title}</h1>
+          <p>{props.data.shopifyProduct.description}</p>
+          {product?.availableForSale && !!selectedVariant && (
             <>
               {product?.variants.length > 1 && (
                 <SelectWrapper>
@@ -85,19 +85,22 @@ export default function ProductTemplate(props) {
               {!!selectedVariant && (
                 <>
                   <Price>${selectedVariant.price}</Price>
+                  <ProductQuantityAdder
+                    available={selectedVariant.available}
+                    variantId={selectedVariant.id}
+                  />
                 </>
               )}
             </>
           )}
         </div>
-
         <div>
           <ImageGallery
             selectedVariantImageId={selectedVariant?.image.id}
             images={props.data.shopifyProduct.images}
           />
         </div>
-            </Grid>
+      </Grid>
         </Layout>
     )
 }
