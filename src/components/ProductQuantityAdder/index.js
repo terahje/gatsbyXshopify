@@ -2,16 +2,19 @@ import React from 'react'
 import { ProductQuantityAdderWrapper } from './styles'
 import { Button } from '../Button'
 import { Input } from '../Input'
+import CartContext from 'context/CartContext'
 
 export function ProductQuantityAdder({ variantId, available }){
-    const [quantity, setQuantity] = React.useState(1);
+    const [quantity, setQuantity] = React.useState(1)
+    const { updateLineItem } = React.useContext(CartContext)
 
     const handleQuantityChange = e => {
-        setQuantity(e.currentTarget.value);
-    };
+        setQuantity(e.currentTarget.value)
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
+        updateLineItem({ variantId, quantity: parseInt(quantity, 10) });
     }
 
 
