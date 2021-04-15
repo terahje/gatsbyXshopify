@@ -7,3 +7,4 @@ export * from './Button';
 export * from './Header';
 export * from './Cart';
 export * from './CartContents';
+export * from './QuantityAdjuster';
