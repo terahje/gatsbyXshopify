@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SEO, HompepageCollectionsGrid } from 'components';
+import { Layout, SEO, HompepageCollectionsGrid, FeatureProducts } from 'components';
 import ProductContext from 'context/ProductContext'
 
 const IndexPage = () => {
@@ -7,7 +7,11 @@ const IndexPage = () => {
   console.log(collections)
   return(
     <Layout>
-      <HompepageCollectionsGrid collections={collections.filter(collection => collection.title !== 'Featured Hats' )}/>
+      <HompepageCollectionsGrid collections={collections.filter(
+        collection => collection.title !== 'Featured Hats' )}/>
+        {!!collections.find(
+          collection => collection.title === 'Featured Hats'
+          ) && <FeatureProducts/>}
       
     </Layout>
   )
