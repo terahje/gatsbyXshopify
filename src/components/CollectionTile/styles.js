@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {StyledLink} from '../StyledLink'
 
 export const CollectionTileWrapper = styled.div`
   height: 300px;
@@ -24,6 +25,25 @@ export const CollectionTileContent = styled.div`
   text-align: center;
   > div {
       padding:20px;
+  }
+
+  ${StyledLink} {
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+      background: black;
+      cursor: pointer;
+    }
+
   }
 `
 
