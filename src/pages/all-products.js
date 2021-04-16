@@ -70,34 +70,34 @@ export default function AllProducts() {
           Search term: <strong>'{searchTerm}'</strong>
         </h3>
       )}
-      {!!filteredProducts.length && <h4>{filteredProducts.length} products</h4>}
-      <Content>
-        <Filters />
-        {!filteredProducts.length && (
-          <div>
-            <h3>
-              <span>Oh no! Nothing matches</span>
-              &nbsp;
-              <strong>'{searchTerm}'</strong>
-            </h3>
-            <div>
-              To help with your search why not try:
-              <br />
-              <br />
-              <ul>
-                <li>Checking your spelling</li>
-                <li>Using less words</li>
-                <li>Try using a different search term</li>
-              </ul>
-            </div>
-          </div>
-        )}
-        {!!filteredProducts.length && (
-          <div>
-            <ProductsGrid products={filteredProducts} />
-          </div>
-        )}
-      </Content>
+         {!!filteredProducts.length && <h4>{filteredProducts.length} products</h4>}
+            <Content>
+                <Filters />
+                {!filteredProducts.length && (
+                <div>
+                    <h3>
+                    <span>Oh no! Nothing matches</span>
+                    &nbsp;
+                    <strong>'{searchTerm}'</strong>
+                    </h3>
+                    <div>
+                    To help with your search why not try:
+                    <br />
+                    <br />
+                    <ul>
+                        <li>Checking your spelling</li>
+                        <li>Using less words</li>
+                        <li>Try using a different search term</li>
+                    </ul>
+                    </div>
+                </div>
+                )}
+                {!!filteredProducts.length && (
+                <div>
+                    <ProductsGrid products={filteredProducts} />
+                </div>
+                )}
+            </Content>
 
         </Layout>
     )
