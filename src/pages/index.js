@@ -7,6 +7,7 @@ const IndexPage = () => {
   console.log(collections)
   return(
     <Layout>
+      <SEO title="Hompepage" description="The MadHatter store homepage"/>
       <HompepageCollectionsGrid collections={collections.filter(
         collection => collection.title !== 'Featured Hats' )}/>
         {!!collections.find(
