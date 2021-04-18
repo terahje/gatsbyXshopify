@@ -17,6 +17,12 @@ export const ProductTileWrapper = styled.div`
         text-align: center;
         font-weight: bold;
         color: black;
+
+        &:hover {
+            color: white;
+            background: black;
+            cursor: pointer;
+          }
     }
 `
 
