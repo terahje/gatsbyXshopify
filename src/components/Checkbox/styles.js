@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const CheckboxWrapper = styled.div`
   height: 20px;
@@ -10,8 +10,8 @@ export const CheckboxWrapper = styled.div`
   background: ${props => (props.checked ? 'black' : 'none')};
 
   > div {
-      line-height: 1;
-      margin: auto;
-      visibility: ${props => (props.checked ? 'visible' : 'hidden')};
+    line-height: 1;
+    margin: auto;
+    visibility: ${props => (props.checked ? 'visible' : 'hidden')};
   }
-`
+`;

@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Icon = styled.div`
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        color: red;
-    }
+  &:hover {
+    color: red;
+  }
 `;

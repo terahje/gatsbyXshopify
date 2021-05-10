@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const CategoryFilterItemWrapper = styled.div`
   display: flex;
@@ -6,6 +6,6 @@ export const CategoryFilterItemWrapper = styled.div`
   cursor: pointer;
 
   > div:last-child {
-      padding-left: 8px;
+    padding-left: 8px;
   }
-`
+`;

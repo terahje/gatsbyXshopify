@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components';
 
-const fullWidthStyles = ({fullWidth}) => {
-    if (fullWidth) {
-        return css`
-        display: block;
-        width: 100%;
-        `
-    }
-
-}
+const fullWidthStyles = ({ fullWidth }) => {
+  if (fullWidth) {
+    return css`
+      display: block;
+      width: 100%;
+    `;
+  }
+};
 
 export const Button = styled.button`
   outline: none;
@@ -26,13 +25,13 @@ export const Button = styled.button`
   border: 1px solid black;
   white-space: nowrap;
   ${fullWidthStyles}
-  
 
   &:hover:not(:disabled) {
     color: white;
     background: black;
     border: 1px solid rgba(0, 0, 0, 0);
   }
+
   &:disabled {
     border-color: #999;
     cursor: not-allowed;
