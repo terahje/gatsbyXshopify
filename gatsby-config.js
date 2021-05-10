@@ -5,8 +5,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `MadHatter Store`,
-    description: `We're mad about hats, you'll be too.`,
-    author: `@terahje`,
+    description: `We're mad about hats`,
+    author: `@tomphill`,
   },
   plugins: [
     `gatsby-plugin-remove-fingerprints`,
@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-shopify-starter`,
+        name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
